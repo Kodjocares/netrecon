@@ -121,7 +121,7 @@ source venv/bin/activate
 
 ```bash
 # 1. Clone
-git clone https://github.com/YOUR_USERNAME/netrecon.git
+git clone https://github.com/Kodjocares/netrecon.git
 cd netrecon
 
 # 2. Create virtual environment
