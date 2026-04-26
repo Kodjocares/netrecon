@@ -111,7 +111,7 @@ netrecon/
 ### Quick Install (Recommended)
 
 ```bash
-git clone https://github.com/Kodjocares/netrecon.git
+git clone https://github.com/YOUR_USERNAME/netrecon.git
 cd netrecon
 bash scripts/install.sh
 source venv/bin/activate
@@ -121,7 +121,7 @@ source venv/bin/activate
 
 ```bash
 # 1. Clone
-git clone https://github.com/Kodjocares/netrecon.git
+git clone https://github.com/YOUR_USERNAME/netrecon.git
 cd netrecon
 
 # 2. Create virtual environment

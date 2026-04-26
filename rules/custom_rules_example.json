@@ -1,0 +1,63 @@
+[
+  {
+    "id": "CUSTOM-001",
+    "name": "Cryptocurrency Mining Detection",
+    "severity": "medium",
+    "category": "Resource Abuse",
+    "protocol": "TCP",
+    "dst_port": null,
+    "payload_pattern": "(?i)(stratum\\+tcp|mining\\.pool|xmrig|nicehash|ethermine)",
+    "flags": null,
+    "description": "Cryptocurrency mining traffic or miner software communication",
+    "mitre": "T1496"
+  },
+  {
+    "id": "CUSTOM-002",
+    "name": "Tor Network Access",
+    "severity": "medium",
+    "category": "Anonymization",
+    "protocol": "TCP",
+    "dst_port": 9001,
+    "payload_pattern": null,
+    "flags": null,
+    "description": "Connection on standard Tor OR port",
+    "mitre": "T1090.003"
+  },
+  {
+    "id": "CUSTOM-003",
+    "name": "Mimikatz Credential Dump",
+    "severity": "critical",
+    "category": "Credential Access",
+    "protocol": "TCP",
+    "dst_port": null,
+    "payload_pattern": "(?i)(sekurlsa|lsadump|mimikatz|wdigest|kerberos.*tickets)",
+    "flags": null,
+    "description": "Mimikatz credential harvesting tool output in network traffic",
+    "mitre": "T1003.001"
+  },
+  {
+    "id": "CUSTOM-004",
+    "name": "Encoded PowerShell Execution",
+    "severity": "high",
+    "category": "Execution",
+    "protocol": "TCP",
+    "dst_port": null,
+    "payload_pattern": "(?i)powershell.*-enc[odedcommand]*\\s+[A-Za-z0-9+/]{40,}",
+    "flags": null,
+    "description": "Base64-encoded PowerShell command — common malware/RAT delivery",
+    "mitre": "T1059.001"
+  },
+  {
+    "id": "CUSTOM-005",
+    "name": "LDAP Enumeration (BloodHound)",
+    "severity": "high",
+    "category": "Discovery",
+    "protocol": "TCP",
+    "dst_port": 389,
+    "rate_threshold": {"connections": 20, "window_sec": 10},
+    "payload_pattern": null,
+    "flags": null,
+    "description": "Rapid LDAP queries consistent with BloodHound AD enumeration",
+    "mitre": "T1087.002"
+  }
+]
